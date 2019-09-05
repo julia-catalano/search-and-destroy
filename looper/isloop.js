@@ -2,7 +2,22 @@
 
 //Complete this algo
 const isLoop = (linkedlist) => {
+  let tortoise = linkedlist.head;
+  let hare = linkedlist.head.next;
 
+  while (tortoise !== linkedlist.tail) {
+    if (tortoise.value === hare.value) return true
+
+    hare = hare.next;
+
+    if (hare === linkedlist.tail) {
+      if (tortoise.value === hare.value) return true
+      tortoise = tortoise.next
+      hare = tortoise.next.next
+    }
+}
+
+  return false
 };
 
 
