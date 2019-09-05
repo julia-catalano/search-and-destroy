@@ -5,20 +5,22 @@ const isLoop = (linkedlist) => {
   let tortoise = linkedlist.head;
   let hare = linkedlist.head.next;
 
-  while (tortoise !== linkedlist.tail) {
-    if (tortoise.value === hare.value) return true
+//   while (tortoise !== linkedlist.tail) {
+//     if (tortoise.next === hare.next) return true
 
-    hare = hare.next;
+//     hare = hare.next;
 
-    if (hare === linkedlist.tail) {
-      if (tortoise.value === hare.value) return true
-      tortoise = tortoise.next
-      hare = tortoise.next.next
-    }
-}
+//     if (hare === linkedlist.tail) {
+//       // if (tortoise.value === hare.value) return true
+//       tortoise = tortoise.next
+//       hare = tortoise.next.next
+//     }
+// }
 
-  return false
+//   return false
 };
+
+
 
 
 /*
